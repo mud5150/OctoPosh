@@ -21,7 +21,7 @@ Function CreateTestADUser ($TestName){
     Import-Module ActiveDirectory
 
     If(!(Get-Module ActiveDirectory)){
-        Write-Error "ActideDirectory Powershell module not found. Expect user-related tests to fail"
+        Write-Error "ActiveDirectory Powershell module not found. Expect user-related tests to fail"
     }
     
     $Name = "$TestName"    
@@ -42,7 +42,7 @@ Function DeleteTestADUser ($testname){
     Import-Module ActiveDirectory
 
     If(!(Get-Module ActiveDirectory)){
-        Write-Error "ActideDirectory Powershell module not found. Expect user-related tests to fail"
+        Write-Error "ActiveDirectory Powershell module not found. Expect user-related tests to fail"
     }
 
     $filter = 'Name -eq ' + "`"" +$testname + "`""
